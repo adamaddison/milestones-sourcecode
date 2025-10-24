@@ -45,5 +45,5 @@
     </div>
 </div>
 
-<div id="editButton" (click)="openEdit()"><img src="edit.svg" /></div>
-<div id="settingsButton" (click)="openSettings()"><img src="settings.svg" /></div>
+<div id="editButton" (click)="openEdit()"><img [src]="themeIsLight() ? 'edit.svg' : 'editDark.svg'" /></div>
+<div id="settingsButton" (click)="openSettings()"><img [src]="themeIsLight() ? 'settings.svg' : 'settingsDark.svg'" /></div>
