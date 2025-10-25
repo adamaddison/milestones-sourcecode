@@ -69,4 +69,13 @@ export class NotificationsComponent
     this.notificationsService.openNotification(countdown, milestone);
     this.openNotifications(false);
   }
+
+  clearAllNotifications()
+  {
+    this.notificationsService.clearAllNotifications();
+  }
+
+  twoOrMoreNotifications = computed(() => {
+    return this.notificationsService.notifications().length >= 2;
+  });
 }
