@@ -84,4 +84,39 @@ export class EditComponent
   {
     this.editService.copyExportCountdownText();
   }
+
+  updateName(name: string)
+  {
+    this.editService.updateName(name);
+  }
+
+  updateEndMessage(message: string)
+  {
+    this.editService.updateEndMessage(message);
+  }
+
+  updateStartDate(date: string)
+  {
+    this.editService.updateStartDate(this.toDate(date));
+  }
+
+  updateEndDate(date: string)
+  {
+    this.editService.updateEndDate(this.toDate(date));
+  }
+
+  updateMilestoneName(name: string, index: number)
+  {
+    this.editService.updateMilestoneName(name, index);
+  }
+
+  updateMilestoneDate(date: string, index: number)
+  {
+    this.editService.updateMilestoneDate(this.toDate(date), index);
+  }
+
+  updateMilestoneNotes(notes: string, index: number)
+  {
+    this.editService.updateMilestoneNotes(notes, index);
+  }
 }
