@@ -17,10 +17,15 @@
 	
     @for(milestone of getMilestones(); track $index)
     {
-        <div class="marker" [style.left.%]="getMilestoneOffset($index)()" [class.markerSelected]="isSelectedMilestone($index)()"></div>
+        <div class="marker" [style.left.%]="getMilestoneOffset($index)()"
+                            [class.markerSelected]="isSelectedMilestone($index)()"
+                            [class.markerLight]="themeIsLight()"
+                            [class.markerDark]="themeIsDark()"></div>
 	    <div class="label" [style.left.%]="getMilestoneOffset($index)()"
                            (click)="selectMilestone($index)"
-                           [class.labelSelected]="isSelectedMilestone($index)()">
+                           [class.labelSelected]="isSelectedMilestone($index)()"
+                           [class.labelLight]="themeIsLight()"
+                           [class.labelDark]="themeIsDark()">
                            {{getMilestoneLabelText($index)()}}
         </div>
     }
