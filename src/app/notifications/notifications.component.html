@@ -44,6 +44,15 @@
     }
     </div>
 
+    @if(twoOrMoreNotifications())
+    {
+        <div id="notificationsMenuFooter" [class.notificationsMenuFooterLight]="themeIsLight()" [class.notificationsMenuFooterDark]="themeIsDark()">
+            <div id="clearAllNotificationsButton" [class.dialogButtonLight]="themeIsLight()" [class.dialogButtonDark]="themeIsDark()" (click)="clearAllNotifications()">
+                Clear All Notifications
+            </div>
+        </div>
+    }
+    
 </div>
 </div>
 

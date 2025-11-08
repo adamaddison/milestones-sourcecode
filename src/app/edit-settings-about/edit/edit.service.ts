@@ -9,7 +9,7 @@ export class EditService
     MILESTONE_COUNT_LIMIT = signal<number>(30);
 
     // This property contains the current coundown values being edited, and after validation are copied over to the app service countdowns array
-    edit: Countdown = {
+    edit = signal<Countdown>({
         name: "",
         endMessage: "",
         startDate: new Date( Date.UTC(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()) ),
@@ -23,7 +23,7 @@ export class EditService
                 notified: false
             }
         ]
-    };
+    });
 
     validationErrorsString = signal<string[]>([]);
 
@@ -41,7 +41,7 @@ export class EditService
                 milestone.date = new Date(milestone.date);
             }
 
-            this.edit = {...copiedCountdown};
+            this.edit.set({...copiedCountdown});
 
             console.log("effect has run.");
         });
@@ -49,11 +49,11 @@ export class EditService
 
     validateAndSaveCountdown()
     {
-        let validationErrors = this.validateCountdown(this.edit);
+        let validationErrors = this.validateCountdown(this.edit());
         if(validationErrors.length == 0)
         {
             this.appService.selectMilestone(-1); // De-selecting any milestones that might have been deleted
-            this.appService.updateCurrentCountdown(this.edit);
+            this.appService.updateCurrentCountdown(this.edit());
             this.notificationsService.updateNotifiedPropertyAfterEdit();
             this.appService.saveCountdowns();
 
@@ -193,7 +193,7 @@ export class EditService
 
     addMilestone()
     {
-        if(this.edit.milestones.length < this.MILESTONE_COUNT_LIMIT())
+        if(this.edit().milestones.length < this.MILESTONE_COUNT_LIMIT())
         {
             // hiding milestone delete buttons before adding new milestone
             let newShow: Show = {...this.appService.show()};
@@ -210,19 +210,27 @@ export class EditService
                 notified: false
             }
 
-            this.edit.milestones.push(newMilestone);
+            let newEdit: Countdown = {...this.edit()};
+
+            newEdit.milestones.push(newMilestone);
+
+            this.edit.set(newEdit);
         }
     }
 
     deleteMilestone(index: number)
     {
-        if(this.edit.milestones.length > 0)
+        if(this.edit().milestones.length > 0)
         {
-            this.edit.milestones.splice(index, 1);
+            let newEdit: Countdown = {...this.edit()};
+
+            newEdit.milestones.splice(index, 1);
+
+            this.edit.set(newEdit);
         }
 
         // milestone delete buttons hidden if no more milestones
-        if(this.edit.milestones.length == 0)
+        if(this.edit().milestones.length == 0)
         {
             let newShow: Show = {...this.appService.show()};
                 
@@ -246,5 +254,68 @@ export class EditService
         navigator.clipboard.writeText(JSON.stringify(this.appService.current()));
 
         this.exportCountdown(false);
+    }
+
+    updateName(name: string)
+    {
+        let newEdit: Countdown = {...this.edit()};
+
+        newEdit.name = name;
+
+        this.edit.set(newEdit);
+    }
+
+    updateEndMessage(message: string)
+    {
+        let newEdit: Countdown = {...this.edit()};
+
+        newEdit.endMessage = message;
+
+        this.edit.set(newEdit);
+    }
+
+    updateStartDate(date: Date)
+    {
+        let newEdit: Countdown = {...this.edit()};
+
+        newEdit.startDate = date;
+
+        this.edit.set(newEdit);
+    }
+
+    updateEndDate(date: Date)
+    {
+        let newEdit: Countdown = {...this.edit()};
+
+        newEdit.endDate = date;
+
+        this.edit.set(newEdit);
+    }
+
+    updateMilestoneName(name: string, index: number)
+    {
+        let newEdit: Countdown = {...this.edit()};
+
+        newEdit.milestones[index].name = name;
+
+        this.edit.set(newEdit);
+    }
+
+    updateMilestoneDate(date: Date, index: number)
+    {
+        let newEdit: Countdown = {...this.edit()};
+
+        newEdit.milestones[index].date = date;
+
+        this.edit.set(newEdit);
+    }
+
+    updateMilestoneNotes(notes: string, index: number)
+    {
+        let newEdit: Countdown = {...this.edit()};
+
+        newEdit.milestones[index].notes = notes;
+
+        this.edit.set(newEdit);
     }
 }

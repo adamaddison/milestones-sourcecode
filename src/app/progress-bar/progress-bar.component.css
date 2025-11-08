@@ -39,28 +39,30 @@
     width: 5px;
     height: 40px;
     transition: height 0.2s ease-out;
-    background: dodgerBlue;
     border-radius: 16px 16px 0 0
+}
+.markerLight
+{
+    background: #1e90ff;
+}
+.markerDark
+{
+    background: #39f;
 }
 .markerSelected
 {
-    height: 72px
+    height: 75px
 }
 
-.label:hover
+.label
 {
-    background-color: #0073e6
-}
-.label {
     position: absolute;
     top: 42px;
     transition: top 0.2s ease-out;
     width: fit-content;
     height: 18px;
-    background: dodgerBlue;
-    border-radius: 16px 16px 16px 16px;
-    color: white;
-    padding: 5px;
+    border-radius: 6px;
+    padding: 4px;
     white-space: nowrap;
     transform: translate(-19px);
     font-size: 12pt;
@@ -69,9 +71,29 @@
     overflow-x: scroll;
     overflow-y: hidden;
 }
+.labelLight
+{
+    border: 3px solid #1e90ff;
+    color: black;
+    background: white;
+}
+.labelLight:hover
+{
+    background-color: #bbb
+}
+.labelDark
+{
+    border: 3px solid #39f;
+    color: white;
+    background: rgb(67, 67, 67);
+}
+.labelDark:hover
+{
+    background-color: #222
+}
 .labelSelected
 {
-    top: 72px;
+    top: 75px;
 }
 
 #percentageLabel {

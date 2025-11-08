@@ -216,6 +216,13 @@ export class NotificationsService
         this.newNotifications.set(newNewNotifications);
     }
 
+    clearAllNotifications()
+    {
+        this.notifications.set([]);
+
+        this.saveNotifications();
+    }
+
     openNotification(countdown: number, milestone: number)
     {
         this.appService.switchCountdown(countdown);

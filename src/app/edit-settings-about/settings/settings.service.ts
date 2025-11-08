@@ -1,7 +1,7 @@
-import { computed, Inject, Injectable, Renderer2, RendererFactory2, signal } from "@angular/core";
+import { computed, Inject, Injectable, Renderer2, RendererFactory2, signal, DOCUMENT } from "@angular/core";
 import { Language, MilestoneLabelFormat, NotificationSetting, Phrases, Settings, Theme, TimeRemainingText, Wallpaper } from "./settings.model";
 import { AppService } from "../../app.service";
-import { DOCUMENT } from "@angular/common";
+
 import { Countdown } from "../../app.model";
 
 @Injectable({

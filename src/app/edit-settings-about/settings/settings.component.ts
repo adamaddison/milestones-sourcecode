@@ -96,17 +96,14 @@ export class SettingsComponent {
   });
 
   // shows / hides the time remaining options drop down
-  openTimeRemainingOptions(isOpen: boolean = true)
+  openTimeRemainingOptions()
   {
     var newShow: Show = { ...this.appService.show() };
 
-    newShow.setTimeRemaining = isOpen;
-    if (isOpen)
-    {
-      newShow.setMilestoneLabelFormat = false;
-      newShow.notificationSetting = false;
-      newShow.language = false;
-    }
+    newShow.setTimeRemaining = !(this.appService.show().setTimeRemaining);
+    newShow.setMilestoneLabelFormat = false;
+    newShow.notificationSetting = false;
+    newShow.language = false;
 
     this.appService.show.set(newShow);
   }
@@ -119,7 +116,7 @@ export class SettingsComponent {
   {
     this.settingsService.setTimeRemainingText(newSetting);
 
-    this.openTimeRemainingOptions(false);
+    this.openTimeRemainingOptions();
   }
 
   getOpenCloseTimeRemainingImg = computed(() => {
@@ -228,17 +225,14 @@ export class SettingsComponent {
   });
 
   // shows / hides the milestone label format options drop down
-  openMilestoneLabelFormatOptions(isOpen: boolean = true)
+  openMilestoneLabelFormatOptions()
   {
     var newShow: Show = { ...this.appService.show() };
 
-    newShow.setMilestoneLabelFormat = isOpen;
-    if (isOpen)
-    {
-      newShow.setTimeRemaining = false;
-      newShow.notificationSetting = false;
-      newShow.language = false;
-    }
+    newShow.setMilestoneLabelFormat = !(this.appService.show().setMilestoneLabelFormat);
+    newShow.setTimeRemaining = false;
+    newShow.notificationSetting = false;
+    newShow.language = false;
 
     this.appService.show.set(newShow);
   }
@@ -251,7 +245,7 @@ export class SettingsComponent {
   {
     this.settingsService.setMilestoneLabelFormat(newSetting);
 
-    this.openMilestoneLabelFormatOptions(false);
+    this.openMilestoneLabelFormatOptions();
   }
 
 
@@ -261,17 +255,14 @@ export class SettingsComponent {
   });
 
   // shows / hides the notifications options drop down
-  openNotificationsOptions(isOpen: boolean = true)
+  openNotificationsOptions()
   {
     var newShow: Show = { ...this.appService.show() };
 
-    newShow.notificationSetting = isOpen;
-    if (isOpen)
-    {
-      newShow.setTimeRemaining = false;
-      newShow.setMilestoneLabelFormat = false;
-      newShow.language = false;
-    }
+    newShow.notificationSetting = !(this.appService.show().notificationSetting);
+    newShow.setTimeRemaining = false;
+    newShow.setMilestoneLabelFormat = false;
+    newShow.language = false;
 
     this.appService.show.set(newShow);
   }
@@ -284,7 +275,7 @@ export class SettingsComponent {
   {
     this.settingsService.setNotifications(newSetting);
 
-    this.openNotificationsOptions(false);
+    this.openNotificationsOptions();
   }
 
 
@@ -294,16 +285,14 @@ export class SettingsComponent {
   });
 
   // shows / hides the language options drop down
-  openLanguageOptions(isOpen: boolean = true)
+  openLanguageOptions()
   {
     var newShow: Show = { ...this.appService.show() };
 
-    newShow.language = isOpen;
-    if (isOpen) {
-      newShow.setTimeRemaining = false;
-      newShow.setMilestoneLabelFormat = false;
-      newShow.notificationSetting = false;
-    }
+    newShow.language = !(this.appService.show().language);
+    newShow.setTimeRemaining = false;
+    newShow.setMilestoneLabelFormat = false;
+    newShow.notificationSetting = false;
 
     this.appService.show.set(newShow);
   }
@@ -316,7 +305,7 @@ export class SettingsComponent {
   {
     this.settingsService.setLanguage(newSetting);
 
-    this.openLanguageOptions(false);
+    this.openLanguageOptions();
   }
 
 

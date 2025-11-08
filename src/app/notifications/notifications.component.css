@@ -51,7 +51,9 @@
     display: block;
     transition: right 0.3s ease-out, visibility 0.3s ease-out;
     visibility: hidden;
-    z-index: 11
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
 }
 .notificationsMenuLight
 {
@@ -154,6 +156,8 @@
     padding: 6px;
     border-radius: 4px;
     padding-top: 0px;
+    flex: 1;
+    overflow-y: scroll;
 }
 
 .notificationItemMessage
@@ -230,4 +234,42 @@
     left: 50%;
     font-size: 18pt;
     width: max-content;
+}
+
+#notificationsMenuFooter
+{
+    position: relative;
+    margin: 0px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    height: 41px;
+    z-index: 11;
+}
+
+.notificationsMenuFooterLight
+{
+    border-top: 1px solid rgb(188, 188, 188);
+    background-color: rgba(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.notificationsMenuFooterDark
+{
+    border-top: 1px solid rgb(111, 111, 111);
+    background-color: rgba(67, 67, 67);
+    color: rgb(255, 255, 255);
+}
+
+#clearAllNotificationsButton
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    width: calc(100% - 14px);
+    text-align: center;
+    box-sizing: border-box;
+    transform: translate(-50%, -50%);
+    margin-top: 0px
 }
