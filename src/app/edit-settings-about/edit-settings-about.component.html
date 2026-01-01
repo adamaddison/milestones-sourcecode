@@ -45,5 +45,7 @@
     </div>
 </div>
 
+<div id="editButtonLabel" [class.lightTextShadow]="themeIsLight()" [class.darkTextShadow]="themeIsDark()" (click)="openEdit()">Edit</div>
 <div id="editButton" (click)="openEdit()"><img [src]="themeIsLight() ? 'edit.svg' : 'editDark.svg'" /></div>
+<div id="settingsButtonLabel" [class.lightTextShadow]="themeIsLight()" [class.darkTextShadow]="themeIsDark()" (click)="openSettings()">Settings</div>
 <div id="settingsButton" (click)="openSettings()"><img [src]="themeIsLight() ? 'settings.svg' : 'settingsDark.svg'" /></div>
