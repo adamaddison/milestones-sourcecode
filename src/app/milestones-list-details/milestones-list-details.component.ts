@@ -41,8 +41,8 @@ export class MilestonesListDetailsComponent
     return this.appService.show().milestonesList;
   });
 
-  showNotes = computed(() => {
-    return this.appService.show().milestonesNotes;
+  showDetails = computed(() => {
+    return this.appService.show().milestoneDetails;
   });
 
   openList()
@@ -50,17 +50,17 @@ export class MilestonesListDetailsComponent
     var newShow: Show = {...this.appService.show()};
     
     newShow.milestonesList = true;
-    newShow.milestonesNotes = false;
+    newShow.milestoneDetails = false;
     
     this.appService.show.set(newShow);
   }
 
-  openNotes()
+  openDetails()
   {
     var newShow: Show = {...this.appService.show()};
     
     newShow.milestonesList = false;
-    newShow.milestonesNotes = true;
+    newShow.milestoneDetails = true;
     
     this.appService.show.set(newShow);
   }

@@ -21,7 +21,7 @@ export interface Show
     countdownsMenu: boolean,
     milestonesInfo: boolean,
     milestonesList: boolean,
-    milestonesNotes: boolean,
+    milestoneDetails: boolean,
     notificationsList: boolean,
     editSettingsAboutContainer: boolean,
     edit: boolean,

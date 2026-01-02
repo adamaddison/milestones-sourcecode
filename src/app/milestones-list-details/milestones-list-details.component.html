@@ -26,12 +26,12 @@
             [class.tabDarkSelected]="showList() && themeIsDark()"
             (click)="openList()">List</div>
 
-            <div id="tabInfoNotes"
-            [class.tabLight]="!showNotes() && themeIsLight()"
-            [class.tabLightSelected]="showNotes() && themeIsLight()"
-            [class.tabDark]="!showNotes() && themeIsDark()"
-            [class.tabDarkSelected]="showNotes() && themeIsDark()"
-            (click)="openNotes()">Details</div>
+            <div id="tabInfoDetails"
+            [class.tabLight]="!showDetails() && themeIsLight()"
+            [class.tabLightSelected]="showDetails() && themeIsLight()"
+            [class.tabDark]="!showDetails() && themeIsDark()"
+            [class.tabDarkSelected]="showDetails() && themeIsDark()"
+            (click)="openDetails()">Details</div>
 		</div>
 
 		<div id="tabViews" [class.tabViewsLight]="themeIsLight()" [class.tabViewsDark]="themeIsDark()" [class.textLight]="themeIsLight()" [class.textDark]="themeIsDark()">
@@ -39,7 +39,7 @@
             {
                 <app-milestones-list></app-milestones-list>
             }
-            @if(showNotes())
+            @if(showDetails())
             {
                 <app-milestone-details></app-milestone-details>
             }

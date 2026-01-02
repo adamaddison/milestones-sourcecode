@@ -8,7 +8,7 @@ export class AppService
     show = signal<Show>({countdownsMenu: false,
         milestonesInfo: false,
         milestonesList: true,
-        milestonesNotes: false,
+        milestoneDetails: false,
         notificationsList: false,
         editSettingsAboutContainer: false,
         edit: true,
