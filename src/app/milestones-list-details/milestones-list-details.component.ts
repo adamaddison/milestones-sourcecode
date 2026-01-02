@@ -7,12 +7,12 @@ import { MilestonesListComponent } from './milestones-list/milestones-list.compo
 import { MilestoneDetailsComponent } from './milestone-details/milestone-details.component';
 
 @Component({
-  selector: 'app-milestones-list-notes',
+  selector: 'app-milestones-list-details',
   imports: [MilestonesListComponent, MilestoneDetailsComponent],
-  templateUrl: './milestones-list-notes.component.html',
-  styleUrl: './milestones-list-notes.component.css'
+  templateUrl: './milestones-list-details.component.html',
+  styleUrl: './milestones-list-details.component.css'
 })
-export class MilestonesListNotesComponent
+export class MilestonesListDetailsComponent
 {
   constructor(private appService: AppService, private settingsService: SettingsService) {}
 
