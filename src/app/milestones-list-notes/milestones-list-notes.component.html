@@ -31,7 +31,7 @@
             [class.tabLightSelected]="showNotes() && themeIsLight()"
             [class.tabDark]="!showNotes() && themeIsDark()"
             [class.tabDarkSelected]="showNotes() && themeIsDark()"
-            (click)="openNotes()">Notes</div>
+            (click)="openNotes()">Details</div>
 		</div>
 
 		<div id="tabViews" [class.tabViewsLight]="themeIsLight()" [class.tabViewsDark]="themeIsDark()" [class.textLight]="themeIsLight()" [class.textDark]="themeIsDark()">
@@ -41,7 +41,7 @@
             }
             @if(showNotes())
             {
-                <app-milestone-notes></app-milestone-notes>
+                <app-milestone-details></app-milestone-details>
             }
         </div>
     </div>

@@ -3,7 +3,7 @@ import { AppService } from "../../app.service";
 import { Countdown } from "../../app.model";
 
 @Injectable({providedIn: 'root'})
-export class MilestoneNotesService
+export class MilestoneDetailsService
 {
     // This property contains the current milestone notes being edited, and after validation is copied over to the app service countdowns array
     editNotes = signal<string>("");

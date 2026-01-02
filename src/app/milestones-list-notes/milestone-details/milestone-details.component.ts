@@ -3,17 +3,17 @@ import { AppService } from '../../app.service';
 import { SettingsService } from '../../edit-settings-about/settings/settings.service';
 import { Theme } from '../../edit-settings-about/settings/settings.model';
 import { FormsModule } from '@angular/forms';
-import { MilestoneNotesService } from './milestone-notes.service';
+import { MilestoneDetailsService } from './milestone-details.service';
 
 @Component({
-  selector: 'app-milestone-notes',
+  selector: 'app-milestone-details',
   imports: [FormsModule],
-  templateUrl: './milestone-notes.component.html',
-  styleUrl: './milestone-notes.component.css'
+  templateUrl: './milestone-details.component.html',
+  styleUrl: './milestone-details.component.css'
 })
-export class MilestoneNotesComponent
+export class MilestoneDetailsComponent
 {
-  constructor(private appService: AppService, private settingsService: SettingsService, protected milestoneNotesService: MilestoneNotesService){}
+  constructor(private appService: AppService, private settingsService: SettingsService, protected milestoneDetailsService: MilestoneDetailsService){}
 
   milestoneIsSelected = computed(() => {
     return this.appService.selected().milestone != -1;
@@ -29,20 +29,20 @@ export class MilestoneNotesComponent
 
   saveNotes()
   {
-    this.milestoneNotesService.saveNotes();
+    this.milestoneDetailsService.saveNotes();
   }
 
   validateNotes()
   {
-    return this.milestoneNotesService.validateNotes();
+    return this.milestoneDetailsService.validateNotes();
   }
 
   showSaveButton = computed(() => {
-    return this.milestoneNotesService.showSaveButton();
+    return this.milestoneDetailsService.showSaveButton();
   });
 
   showErrorText = computed(() => {
-    return this.milestoneNotesService.showErrorText();
+    return this.milestoneDetailsService.showErrorText();
   });
   
 }

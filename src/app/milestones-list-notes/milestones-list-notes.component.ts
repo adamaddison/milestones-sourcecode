@@ -4,11 +4,11 @@ import { SettingsService } from '../edit-settings-about/settings/settings.servic
 import { Theme } from '../edit-settings-about/settings/settings.model';
 import { Show } from '../app.model';
 import { MilestonesListComponent } from './milestones-list/milestones-list.component';
-import { MilestoneNotesComponent } from './milestone-notes/milestone-notes.component';
+import { MilestoneDetailsComponent } from './milestone-details/milestone-details.component';
 
 @Component({
   selector: 'app-milestones-list-notes',
-  imports: [MilestonesListComponent, MilestoneNotesComponent],
+  imports: [MilestonesListComponent, MilestoneDetailsComponent],
   templateUrl: './milestones-list-notes.component.html',
   styleUrl: './milestones-list-notes.component.css'
 })

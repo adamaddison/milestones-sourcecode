@@ -1,10 +1,10 @@
 @if(milestoneIsSelected())
 {
-    <span id="notesTitle">'{{this.milestoneNotesService.selectedMilestoneName()}}' Notes:</span>
+    <span id="notesTitle">'{{this.milestoneDetailsService.selectedMilestoneName()}}' Notes:</span>
     <textarea id="notesInput"
     [class.inputLight]="themeIsLight()"
     [class.inputDark]="themeIsDark()"
-    [ngModel]="this.milestoneNotesService.editNotes()" (ngModelChange)="this.milestoneNotesService.editNotes.set($event); validateNotes()"></textarea>
+    [ngModel]="this.milestoneDetailsService.editNotes()" (ngModelChange)="this.milestoneDetailsService.editNotes.set($event); validateNotes()"></textarea>
     
     @if(this.showSaveButton())
     {
