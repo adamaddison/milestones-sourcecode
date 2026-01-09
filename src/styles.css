@@ -266,11 +266,17 @@ body{ font-family: -apple-system, BlinkMacSystemFont, sans-serif; background-siz
 
 .textLight
 {
-    color: #000 !important
+    color: #000 !important;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%
 }
 .textDark
 {
-    color: #fff !important
+    color: #fff !important;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%
 }
 
 .lastItem
