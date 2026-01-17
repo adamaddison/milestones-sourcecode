@@ -33,7 +33,11 @@ export class MilestoneDetailsService
                 this.editName.set(newName);
                 this.editDate.set(newDate);
 
+                // Resetting error messages and hiding save button when new milestone selected
                 this.showSaveButton.set(false);
+                this.errorTextNotes.set("");
+                this.errorTextName.set("");
+                this.errorTextDate.set("");
             }
         });
     }
