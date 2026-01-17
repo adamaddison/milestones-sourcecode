@@ -27,11 +27,11 @@
                 <div id="infoGroup" [class.infoGroupLight]="themeIsLight()" [class.infoGroupDark]="themeIsDark()">
                     <div class="infoLine" [class.infoLineLight]="themeIsLight()" [class.infoLineDark]="themeIsDark()">
                         <div class="infoLineKey" [class.textLight]="themeIsLight()" [class.textDark]="themeIsDark()">Milestones Version</div>
-                        <div class="infoLineValue">6.1 (November 2025)</div>
+                        <div class="infoLineValue">6.2 (January 2026)</div>
                     </div>
                     <div class="infoLine" [class.infoLineLight]="themeIsLight()" [class.infoLineDark]="themeIsDark()">
                         <div class="infoLineKey" [class.textLight]="themeIsLight()" [class.textDark]="themeIsDark()">Angular</div>
-                        <div class="infoLineValue">20.3.7</div>
+                        <div class="infoLineValue">21.1.0</div>
                     </div>
                     <div class="infoLine lastItem" [class.infoLineLight]="themeIsLight()" [class.infoLineDark]="themeIsDark()">
                         <div class="infoLineKey" [class.textLight]="themeIsLight()" [class.textDark]="themeIsDark()">Countdowns</div>
@@ -45,5 +45,7 @@
     </div>
 </div>
 
+<div id="editButtonLabel" [class.lightTextShadow]="themeIsLight()" [class.darkTextShadow]="themeIsDark()" (click)="openEdit()">Edit</div>
 <div id="editButton" (click)="openEdit()"><img [src]="themeIsLight() ? 'edit.svg' : 'editDark.svg'" /></div>
+<div id="settingsButtonLabel" [class.lightTextShadow]="themeIsLight()" [class.darkTextShadow]="themeIsDark()" (click)="openSettings()">Settings</div>
 <div id="settingsButton" (click)="openSettings()"><img [src]="themeIsLight() ? 'settings.svg' : 'settingsDark.svg'" /></div>

@@ -8,9 +8,10 @@
     padding: 5px;
     position: relative;
     display: block;
+    margin-top: 0px
 }
 
-#notesTitle
+#detailsTitle
 {
     font-size: 12pt;
     font-family: sans-serif;
@@ -21,12 +22,12 @@
     text-align: center;
 }
 
-#notesSaveButton
+#detailsSaveButton
 {
     margin-top: 5px
 }
 
-#notesErrorText
+.detailsErrorText
 {
     text-align: center;
     font-family: sans-serif;
@@ -43,4 +44,21 @@
     text-align: center;
     color: #868686;
     padding: 12px
+}
+
+#milestoneDetailsInputs
+{
+    font-size: 10pt;
+    width: 100% !important;
+    margin-top: 5px !important
+}
+
+#milestoneDetailsInputDate
+{
+    border-bottom: 0px;
+}
+
+#milestoneDetailsInputNotes
+{
+    padding: 6px
 }

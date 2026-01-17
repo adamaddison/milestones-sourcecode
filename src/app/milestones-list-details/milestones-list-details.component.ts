@@ -4,15 +4,15 @@ import { SettingsService } from '../edit-settings-about/settings/settings.servic
 import { Theme } from '../edit-settings-about/settings/settings.model';
 import { Show } from '../app.model';
 import { MilestonesListComponent } from './milestones-list/milestones-list.component';
-import { MilestoneNotesComponent } from './milestone-notes/milestone-notes.component';
+import { MilestoneDetailsComponent } from './milestone-details/milestone-details.component';
 
 @Component({
-  selector: 'app-milestones-list-notes',
-  imports: [MilestonesListComponent, MilestoneNotesComponent],
-  templateUrl: './milestones-list-notes.component.html',
-  styleUrl: './milestones-list-notes.component.css'
+  selector: 'app-milestones-list-details',
+  imports: [MilestonesListComponent, MilestoneDetailsComponent],
+  templateUrl: './milestones-list-details.component.html',
+  styleUrl: './milestones-list-details.component.css'
 })
-export class MilestonesListNotesComponent
+export class MilestonesListDetailsComponent
 {
   constructor(private appService: AppService, private settingsService: SettingsService) {}
 
@@ -41,8 +41,8 @@ export class MilestonesListNotesComponent
     return this.appService.show().milestonesList;
   });
 
-  showNotes = computed(() => {
-    return this.appService.show().milestonesNotes;
+  showDetails = computed(() => {
+    return this.appService.show().milestoneDetails;
   });
 
   openList()
@@ -50,17 +50,17 @@ export class MilestonesListNotesComponent
     var newShow: Show = {...this.appService.show()};
     
     newShow.milestonesList = true;
-    newShow.milestonesNotes = false;
+    newShow.milestoneDetails = false;
     
     this.appService.show.set(newShow);
   }
 
-  openNotes()
+  openDetails()
   {
     var newShow: Show = {...this.appService.show()};
     
     newShow.milestonesList = false;
-    newShow.milestonesNotes = true;
+    newShow.milestoneDetails = true;
     
     this.appService.show.set(newShow);
   }
