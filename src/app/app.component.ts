@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { Countdown } from './app.model';
 import { ProgressBarComponent } from "./progress-bar/progress-bar.component";
 import { AppService } from './app.service';
@@ -12,7 +12,8 @@ import { NotificationsComponent } from './notifications/notifications.component'
   selector: 'app-root',
   imports: [ProgressBarComponent, StatusBarComponent, EditSettingsAboutComponent, CountdownsMenuComponent, MilestonesListDetailsComponent, NotificationsComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   title = 'Milestones';

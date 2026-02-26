@@ -1,4 +1,4 @@
-import { Component, computed, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
 import { AppService } from '../../app.service';
 import { SettingsService } from '../../edit-settings-about/settings/settings.service';
 import { Theme } from '../../edit-settings-about/settings/settings.model';
@@ -10,7 +10,8 @@ import { DatePipe } from '@angular/common';
   selector: 'app-milestone-details',
   imports: [FormsModule, DatePipe],
   templateUrl: './milestone-details.component.html',
-  styleUrl: './milestone-details.component.css'
+  styleUrl: './milestone-details.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MilestoneDetailsComponent
 {

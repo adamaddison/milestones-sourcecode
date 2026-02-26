@@ -1,4 +1,4 @@
-import { Component, computed, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
 import { SettingsService } from './settings.service';
 import { Language, MilestoneLabelFormat, NotificationSetting, Theme, TimeRemainingText, Wallpaper, WallpaperPreview } from './settings.model';
 import { AppService } from '../../app.service';
@@ -9,7 +9,8 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-settings',
   imports: [FormsModule],
   templateUrl: './settings.component.html',
-  styleUrl: './settings.component.css'
+  styleUrl: './settings.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SettingsComponent {
 
