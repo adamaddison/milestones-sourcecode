@@ -280,7 +280,7 @@
     <div class="settingsButton" [class.dialogButtonWarningLight]="CurrentTheme() == Light()" [class.dialogButtonWarningDark]="CurrentTheme() == Dark()" (click)="openResetSettings()">Reset Settings to Default</div>
 </div>
 
-<div class="greyedOutBackground lightGreyedOutBackground" [class.opacityFull]="showResetYear() || showResetEmpty() || showResetSettings()"></div>
+<div class="greyedOutBackground" [class.opacityFull]="showResetYear() || showResetEmpty() || showResetSettings()"></div>
 
 <div [class.dialogLight]="CurrentTheme() == Light()" [class.dialogDark]="CurrentTheme() == Dark()" [class.opacityFull]="showResetYear()">
     <header>Reset to Empty Year-to-Year Countdown?</header>

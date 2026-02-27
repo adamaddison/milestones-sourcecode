@@ -10,14 +10,7 @@ body{ font-family: -apple-system, BlinkMacSystemFont, sans-serif; background-siz
     visibility: hidden;
     opacity: 0%;
     z-index: 12;
-}
-.lightGreyedOutBackground
-{
     background-color: rgba(0, 0, 0, 0.5)
-}
-.darkGreyedOutBackground
-{
-    background-color: rgba(90, 90, 90, 0.5)
 }
 
 

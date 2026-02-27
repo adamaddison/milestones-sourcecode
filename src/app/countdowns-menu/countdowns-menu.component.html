@@ -46,7 +46,7 @@
     </div>
 </div>
 
-<div class="greyedOutBackground lightGreyedOutBackground" [class.opacityFull]="showImportCountdown()"></div>
+<div class="greyedOutBackground" [class.opacityFull]="showImportCountdown()"></div>
 
 <div [class.dialogLight]="themeIsLight()" [class.dialogDark]="themeIsDark()" [class.opacityFull]="showImportCountdown()">
     <header>Import Countdown</header>
@@ -82,7 +82,7 @@
 
 @if(!oneCountdownLeft())
 {
-    <div class="greyedOutBackground lightGreyedOutBackground" [class.opacityFull]="showDeleteConfirm() && countdownToDelete() != -1"></div>
+    <div class="greyedOutBackground" [class.opacityFull]="showDeleteConfirm() && countdownToDelete() != -1"></div>
 
     <div [class.dialogLight]="themeIsLight()" [class.dialogDark]="themeIsDark()" [class.opacityFull]="showDeleteConfirm() && countdownToDelete() != -1">
         <header>Delete "{{getCountdownName(countdownToDelete())()}}" Countdown?</header>

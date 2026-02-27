@@ -1,6 +1,9 @@
-<div class="greyedOutBackground" [class.lightGreyedOutBackground]="themeIsLight()" [class.darkGreyedOutBackground]="themeIsDark()" [class.opacityFull]="showWindow()"></div>
+<div class="greyedOutBackground" [class.opacityFull]="showWindow()"></div>
 
-<div id="editSettingsAboutContainer" [class.lightModePanelBackground]="themeIsLight()" [class.darkModePanelBackground]="themeIsDark()" [class.opacityFull]="showWindow()">
+<div id="editSettingsAboutContainer" [class.lightModePanelBackground]="themeIsLight()"
+                                     [class.darkModePanelBackground]="themeIsDark()"
+                                     [class.containerShadowDarkMode]="themeIsDark()"
+                                     [class.opacityFull]="showWindow()">
     <div id="editSettingsAboutHeader" [class.headerLight]="themeIsLight()" [class.headerDark]="themeIsDark()">
         <div id="openSidebarMobileButton" [class.dialogButtonLight]="themeIsLight()" [class.dialogButtonDark]="themeIsDark()" (click)="toggleSidebarMobile()">
             <div class="menuIconLine firstMenuLine" [class.menuIconLineLight]="themeIsLight()" [class.menuIconLineDark]="themeIsDark()"></div>
