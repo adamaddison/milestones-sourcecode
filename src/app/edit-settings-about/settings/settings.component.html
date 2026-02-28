@@ -276,7 +276,7 @@
     <span class="settingsTitle">RESET</span>
 
     <div class="settingsButton" [class.dialogButtonWarningLight]="CurrentTheme() == Light()" [class.dialogButtonWarningDark]="CurrentTheme() == Dark()" (click)="openResetYear()">Reset to Year-to-Year Countdown</div>
-    <div class="settingsButton" [class.dialogButtonWarningLight]="CurrentTheme() == Light()" [class.dialogButtonWarningDark]="CurrentTheme() == Dark()" (click)="openResetEmpty()">Reset All Countdown Values</div>
+    <div class="settingsButton" [class.dialogButtonWarningLight]="CurrentTheme() == Light()" [class.dialogButtonWarningDark]="CurrentTheme() == Dark()" (click)="openResetEmpty()">Reset to Empty Countdown</div>
     <div class="settingsButton" [class.dialogButtonWarningLight]="CurrentTheme() == Light()" [class.dialogButtonWarningDark]="CurrentTheme() == Dark()" (click)="openResetSettings()">Reset Settings to Default</div>
 </div>
 
@@ -290,7 +290,7 @@
 </div>
 
 <div [class.dialogLight]="CurrentTheme() == Light()" [class.dialogDark]="CurrentTheme() == Dark()" [class.opacityFull]="showResetEmpty()">
-    <header>Reset All Countdown Values?</header>
+    <header>Reset to Empty Countdown?</header>
     <p>This will reset the start date, end date, countdown name, end message and all milestone values back to their default values.</p>
     <div [class.dialogButtonWarningLight]="CurrentTheme() == Light()" [class.dialogButtonWarningDark]="CurrentTheme() == Dark()" (click)="resetEmpty()">Reset</div>
     <div [class.dialogButtonLight]="CurrentTheme() == Light()" [class.dialogButtonDark]="CurrentTheme() == Dark()" (click)="openResetEmpty(false)">Cancel</div>

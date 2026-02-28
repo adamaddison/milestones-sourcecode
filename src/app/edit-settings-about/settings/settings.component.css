@@ -10,7 +10,10 @@
 {
     font-size: 10pt;
     color: gray;
-    padding: 9px
+    padding: 9px;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 .settingsHeader
@@ -20,6 +23,9 @@
     color: gray;
     padding-top: 4px;
     padding-left: 9px;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 .settingsItem
@@ -39,6 +45,9 @@
     margin-top: 5px;
     text-align: center;
     box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 .settingsSelectors
