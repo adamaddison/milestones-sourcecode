@@ -369,6 +369,10 @@ export class SettingsComponent {
     return this.appService.show().resetYear;
   });
 
+  showResetMonth = computed(() => {
+    return this.appService.show().resetMonth;
+  });
+
   showResetEmpty = computed(() => {
     return this.appService.show().resetEmpty;
   });
@@ -376,6 +380,15 @@ export class SettingsComponent {
   showResetSettings = computed(() => {
     return this.appService.show().resetSettings;
   });
+
+  openResetMonth(isOpen: boolean = true)
+  {
+    let newShow: Show = { ...this.appService.show() };
+
+    newShow.resetMonth = isOpen;
+
+    this.appService.show.set(newShow);
+  }
 
   openResetYear(isOpen: boolean = true)
   {
@@ -402,6 +415,13 @@ export class SettingsComponent {
     newShow.resetSettings = isOpen;
 
     this.appService.show.set(newShow);
+  }
+
+  resetMonth()
+  {
+    this.settingsService.resetMonth();
+
+    this.openResetMonth(false);
   }
 
   resetYear()
