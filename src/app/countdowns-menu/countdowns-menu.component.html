@@ -40,8 +40,9 @@
          [class.addOptionsLight]="themeIsLight()"
          [class.addOptionsDark]="themeIsDark()"
          [class.opacityFull]="showAddOptions()">
-        <p [class.addOptionLight]="themeIsLight()" [class.addOptionDark]="themeIsDark()" (click)="addCountdown()">New Empty Countdown</p>
-        <p [class.addOptionLight]="themeIsLight()" [class.addOptionDark]="themeIsDark()" (click)="addCountdown(true)">New Year-to-Year Countdown</p>
+        <p [class.addOptionLight]="themeIsLight()" [class.addOptionDark]="themeIsDark()" (click)="addEmptyCountdown()">New Empty Countdown</p>
+        <p [class.addOptionLight]="themeIsLight()" [class.addOptionDark]="themeIsDark()" (click)="addYearToYearCountdown()">New Year-to-Year Countdown</p>
+        <p [class.addOptionLight]="themeIsLight()" [class.addOptionDark]="themeIsDark()" (click)="addMonthToMonthCountdown()">New Month-to-Month Countdown</p>
         <p [class.addOptionLight]="themeIsLight()" [class.addOptionDark]="themeIsDark()" class="lastItem" (click)="openImportCountdown()">Import Existing Countdown</p>
     </div>
 </div>

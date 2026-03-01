@@ -130,9 +130,19 @@ export class CountdownsMenuComponent {
     this.countdownsMenuService.switchCountdown(index);
   }
 
-  addCountdown(isYearToTear = false)
+  addMonthToMonthCountdown()
   {
-    this.countdownsMenuService.addCountdown(isYearToTear);
+    this.countdownsMenuService.addMonthToMonthCountdown();
+  }
+
+  addYearToYearCountdown()
+  {
+    this.countdownsMenuService.addYearToYearCountdown();
+  }
+
+  addEmptyCountdown()
+  {
+    this.countdownsMenuService.addEmptyCountdown();
   }
 
   showDeleteConfirm = computed(() => {
