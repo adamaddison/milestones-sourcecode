@@ -163,8 +163,14 @@ export class CountdownsMenuService
                 this.switchCountdown(this.appService.selected().countdown - 1);
             }
 
-            this.appService.deleteCountdown(index);
             this.notificationService.deleteNotificationsByCountdown(index);
+            // Decrementing the countdown field of the notifications for every countdown after the one being deleted so that they match the new array index after deletion
+            for(let i = index+1; i<this.appService.countdowns().length; i+=1)
+            {
+                this.notificationService.decrementCountdownNumberByCountdown(i);
+            }
+
+            this.appService.deleteCountdown(index);
             this.appService.saveCountdowns();
 
             this.closeMenu();
