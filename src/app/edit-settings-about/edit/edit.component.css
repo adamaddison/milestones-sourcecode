@@ -84,6 +84,9 @@
 {
     font-size: 10pt;
     color: gray;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 #countdownValuesEditHeader
 {
@@ -92,7 +95,10 @@
 
 #addDeleteMilestoneButtons
 {
-    margin-top: 35px
+    margin-top: 35px;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 #addMilestoneButton

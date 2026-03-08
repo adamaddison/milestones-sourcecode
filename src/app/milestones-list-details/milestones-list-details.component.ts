@@ -1,4 +1,4 @@
-import { Component, computed } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed } from '@angular/core';
 import { AppService } from '../app.service';
 import { SettingsService } from '../edit-settings-about/settings/settings.service';
 import { Theme } from '../edit-settings-about/settings/settings.model';
@@ -10,7 +10,8 @@ import { MilestoneDetailsComponent } from './milestone-details/milestone-details
   selector: 'app-milestones-list-details',
   imports: [MilestonesListComponent, MilestoneDetailsComponent],
   templateUrl: './milestones-list-details.component.html',
-  styleUrl: './milestones-list-details.component.css'
+  styleUrl: './milestones-list-details.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MilestonesListDetailsComponent
 {

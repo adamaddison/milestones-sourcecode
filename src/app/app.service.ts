@@ -21,6 +21,7 @@ export class AppService
         notificationSetting: false,
         resetEmpty: false,
         resetYear: false,
+        resetMonth: false,
         resetSettings: false,
         about: false,
         deleteMilestoneButtons: false,

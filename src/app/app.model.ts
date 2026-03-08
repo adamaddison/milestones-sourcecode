@@ -34,6 +34,7 @@ export interface Show
     notificationSetting: boolean,
     resetEmpty: boolean,
     resetYear: boolean,
+    resetMonth: boolean,
     resetSettings: boolean,
     about: boolean,
     deleteMilestoneButtons: boolean,
