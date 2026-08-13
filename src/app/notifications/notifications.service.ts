@@ -44,7 +44,6 @@ export class NotificationsService
         // Clearing the new notifications array once the list is hidden as this data is now redundant (and giving time for the hide transition to happen)
         setTimeout(() => {
             this.newNotifications.set([]);
-            console.log("newNotifications = []");
         }, 11000);
     }
 
