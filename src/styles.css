@@ -87,7 +87,8 @@ body{ font-family: -apple-system, BlinkMacSystemFont, sans-serif; background-siz
     border: 1px solid rgb(150,150,150);
     border-radius: 0px;
     box-shadow: inset 0 1px 1px rgba(169, 169, 169, 0.7);
-    font-family: sans-serif
+    font-family: sans-serif;
+    font-size: 16px;
 }
 
 .inputDark
@@ -98,7 +99,8 @@ body{ font-family: -apple-system, BlinkMacSystemFont, sans-serif; background-siz
     border: 1px solid rgb(205, 205, 205);
     border-radius: 0px;
     box-shadow: inset 0 1px 2px rgba(175, 175, 175, 0.7);
-    font-family: sans-serif
+    font-family: sans-serif;
+    font-size: 16px;
 }
 
 .dialogLight
@@ -364,12 +366,25 @@ body{ font-family: -apple-system, BlinkMacSystemFont, sans-serif; background-siz
     border: 4px solid #007cff;
 }
 
-.countdownInput
+@media only screen and (min-width: 1000px)
 {
-    width: 100%;
-    padding: 9px;
-    box-sizing: border-box;
-    position: relative;
+    .countdownInput
+    {
+        width: 100%;
+        padding: 12px;
+        box-sizing: border-box;
+        position: relative;
+    }
+}
+@media only screen and (max-width: 999px)
+{
+    .countdownInput
+    {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        position: relative;
+    }
 }
 
 .countdownInputLight
@@ -405,17 +420,37 @@ body{ font-family: -apple-system, BlinkMacSystemFont, sans-serif; background-siz
     overflow: hidden
 }
 
-.countdownInputBox
+@media only screen and (min-width: 1000px)
 {
-    position: absolute;
-    width: 50%;
-    min-width: 50%;
-    height: 22px;
-    min-height: 22px;
-    appearance: none;
-    right: 6px;
-    top: calc(50%);
-    transform: translateY(-50%);
-    font-family: sans-serif;
-    font-size: 10pt
+    .countdownInputBox
+    {
+        position: absolute;
+        width: 50%;
+        min-width: 50%;
+        height: 26px;
+        min-height: 26px;
+        appearance: none;
+        right: 6px;
+        top: calc(50%);
+        transform: translateY(-50%);
+        font-family: sans-serif;
+        font-size: 11pt
+    }
+}
+@media only screen and (max-width: 999px)
+{
+    .countdownInputBox
+    {
+        position: absolute;
+        width: 50%;
+        min-width: 50%;
+        height: 32px;
+        min-height: 32px;
+        appearance: none;
+        right: 6px;
+        top: calc(50%);
+        transform: translateY(-50%);
+        font-family: sans-serif;
+        font-size: 16px
+    }
 }
