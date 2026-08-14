@@ -357,7 +357,18 @@
     font-weight: bold !important;
 }
 
-#customBackgroundUrlInputLight, #customBackgroundUrlInputDark
+@media only screen and (min-width: 1000px)
 {
-    width: 100%;
+    #customBackgroundUrlInputLight, #customBackgroundUrlInputDark
+    {
+        width: 100%;
+        font-size: 10pt;
+    }
+}
+@media only screen and (max-width: 999px)
+{
+    #customBackgroundUrlInputLight, #customBackgroundUrlInputDark
+    {
+        width: 100%;
+    }
 }
