@@ -82,19 +82,23 @@ body{ font-family: -apple-system, BlinkMacSystemFont, sans-serif; background-siz
 .inputLight
 {
     box-sizing: border-box;
-    border: 2px solid rgb(170, 170, 170);
-    border-radius: 4px;
     color: #000;
     background-color: #fff;
+    border: 1px solid rgb(150,150,150);
+    border-radius: 0px;
+    box-shadow: inset 0 1px 1px rgba(169, 169, 169, 0.7);
+    font-family: sans-serif
 }
 
 .inputDark
 {
     box-sizing: border-box;
-    border: 2px solid rgb(170, 170, 170);
-    border-radius: 4px;
     color: #fff;
-    background-color: rgb(67, 67, 67)
+    background-color: rgb(67, 67, 67);
+    border: 1px solid rgb(205, 205, 205);
+    border-radius: 0px;
+    box-shadow: inset 0 1px 2px rgba(175, 175, 175, 0.7);
+    font-family: sans-serif
 }
 
 .dialogLight
@@ -412,6 +416,6 @@ body{ font-family: -apple-system, BlinkMacSystemFont, sans-serif; background-siz
     right: 6px;
     top: calc(50%);
     transform: translateY(-50%);
-    font-family: -apple-system,BlinkMacSystemFont,sans-serif;
+    font-family: sans-serif;
     font-size: 10pt
 }
