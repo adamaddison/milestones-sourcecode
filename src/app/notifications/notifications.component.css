@@ -1,6 +1,20 @@
-#notificationsIcon
+@media only screen and (min-width: 1000px)
 {
-    text-align: center;
+    #notificationsIcon
+    {
+        text-align: center;
+        position: relative;
+        top: 1px
+    }
+}
+@media only screen and (max-width: 999px)
+{
+    #notificationsIcon
+    {
+        text-align: center;
+        position: relative;
+        top: 3px
+    }
 }
 
 #openNotificationsButton
@@ -9,13 +23,26 @@
     right: 5px;
     top: 33px;
     width: 68px;
-    height: 30px;
     z-index: 9;
     margin-top: 0px;
 
     margin: 0px;
     padding: 0px;
     box-shadow: 0px 0px 0px 0px black;
+}
+@media only screen and (min-width: 1000px)
+{
+    #openNotificationsButton
+    {
+        height: 32px
+    }
+}
+@media only screen and (max-width: 999px)
+{
+    #openNotificationsButton
+    {
+        height: 36px
+    }
 }
 .openNotificationsButtonLight
 {
@@ -99,11 +126,26 @@
 {
     position: relative;
     margin: 0px;
-    padding: 10px;
     text-align: center;
     font-weight: bold;
     font-size: 13pt;
     display: block;
+}
+@media only screen and (min-width: 1000px)
+{
+    #notificationsMenuHeader span
+    {
+        padding: 12px;
+        padding-bottom: 11px;
+    }
+}
+@media only screen and (max-width: 999px)
+{
+    #notificationsMenuHeader span
+    {
+        padding: 14px;
+        padding-bottom: 13px;
+    }
 }
 
 #closeNotificationsButton
@@ -112,8 +154,23 @@
     right: 6px;
     top: 1px;
     font-size: 11pt;
-    width: 30px;
-    height: 30px;
+    padding: 4px
+}
+@media only screen and (min-width: 1000px)
+{
+    #closeNotificationsButton
+    {
+        width: 32px;
+        height: 32px;
+    }
+}
+@media only screen and (max-width: 999px)
+{
+    #closeNotificationsButton
+    {
+        width: 36px;
+        height: 36px;
+    }
 }
 
 #closeNotificationsButton img
@@ -244,8 +301,21 @@
     width: 100%;
     box-sizing: border-box;
     display: block;
-    height: 41px;
     z-index: 11;
+}
+@media only screen and (min-width: 1000px)
+{
+    #notificationsMenuFooter
+    {
+        height: 44px
+    }
+}
+@media only screen and (max-width: 999px)
+{
+    #notificationsMenuFooter
+    {
+        height: 48px
+    }
 }
 
 .notificationsMenuFooterLight
@@ -272,4 +342,9 @@
     box-sizing: border-box;
     transform: translate(-50%, -50%);
     margin-top: 0px
+}
+
+.notificationItemShowButton, .notificationItemDismissButton
+{
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
