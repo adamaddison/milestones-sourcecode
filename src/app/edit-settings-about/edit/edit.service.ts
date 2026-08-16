@@ -115,10 +115,7 @@ export class EditService
         }
 
         let currentDateMinus5000Days = new Date( Date.UTC(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() - 5000) );
-        console.log("Current date - 5000 days = " + currentDateMinus5000Days);
-
         let startDatePlus5000Days = new Date( Date.UTC(countdown.startDate.getFullYear(), countdown.startDate.getMonth(), countdown.startDate.getDate() + 5000) );
-        console.log("Start date + 5000 days = " + startDatePlus5000Days);
 
         // Checking the dates are within the valid range and the strings are of valid length
         if(!(startDate <= currentDate))

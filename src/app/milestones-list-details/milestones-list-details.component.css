@@ -98,7 +98,22 @@
     text-align: center;
     font-size: 13pt;
     font-weight: bold;
-    padding: 10px
+}
+@media only screen and (min-width: 1000px)
+{
+    #milestonesInfoWindowHeader
+    {
+        padding: 12px;
+        padding-bottom: 11px;
+    }
+}
+@media only screen and (max-width: 999px)
+{
+    #milestonesInfoWindowHeader
+    {
+        padding: 14px;
+        padding-bottom: 13px;
+    }
 }
 #closeMilestoneInfo
 {
@@ -106,8 +121,23 @@
   right: 6px;
   top: 1px;
   font-size: 11pt;
-  width: 30px;
-  height: 30px;
+  padding: 4px;
+}
+@media only screen and (min-width: 1000px)
+{
+    #closeMilestoneInfo
+    {
+        width: 32px;
+        height: 32px;
+    }
+}
+@media only screen and (max-width: 999px)
+{
+    #closeMilestoneInfo
+    {
+        width: 36px;
+        height: 36px;
+    }
 }
 #closeMilestoneInfo img
 {

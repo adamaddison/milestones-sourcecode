@@ -10,19 +10,7 @@ export class ProgressBarService
 
     // Gets percentage between start and end of current countdown
     getBarLength = computed(() => {
-        let currentDate = new Date( Date.UTC(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()) ).getTime();
-        let startDate = this.appService.current().startDate.getTime();
-        let endDate = this.appService.current().endDate.getTime();
-
-        let percentage = ((currentDate - startDate) / (endDate - startDate)) * 100;
-
-        // Capping percentage at 100%
-        if(percentage > 100)
-        {
-            return 100;
-        }
-
-        return percentage;
+        return this.getPercentageValue();
     });
 
     getBarColour = computed(() => {
@@ -59,6 +47,11 @@ export class ProgressBarService
 
     // Same as getBarLength but rounded to 1 decimal place
     getPercentageLabelText = computed(() => {
+        return this.roundNumber(this.getPercentageValue(), 1);
+    });
+
+    private getPercentageValue()
+    {
         let currentDate = new Date( Date.UTC(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()) ).getTime();
         let startDate = this.appService.current().startDate.getTime();
         let endDate = this.appService.current().endDate.getTime();
@@ -71,8 +64,8 @@ export class ProgressBarService
             percentage = 100;
         }
 
-        return this.roundNumber(percentage, 1);
-    });
+        return percentage;
+    }
 
     getMilestones = computed(() => {
         return this.appService.current().milestones;

@@ -57,8 +57,6 @@ export class CountdownsMenuComponent {
     this.appService.show.set(newShow);
 
     this.countdownToDelete.set(countdownToDelete);
-
-    console.log("countdownToDelete = " + this.countdownToDelete());
   }
 
   deleteCountdown(index: number)

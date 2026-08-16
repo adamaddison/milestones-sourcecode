@@ -167,8 +167,6 @@ export class SettingsService
             newSettings.theme = themeQuery.matches ? Theme.Dark : Theme.Light;
 
             this.settings.set(newSettings);
-
-            console.log("Theme: " + this.settings().theme);
         }
 
         // Theme changes every time system theme changes when auto theme is on
@@ -180,8 +178,6 @@ export class SettingsService
                 newSettings.theme = themeQuery.matches ? Theme.Dark : Theme.Light;
     
                 this.settings.set(newSettings);
-
-                console.log("Theme: " + this.settings().theme);
 
                 this.updateAppWallpaper();
             }
@@ -337,8 +333,6 @@ export class SettingsService
         this.settings.set(newSettings);
 
         this.updateAppWallpaper();
-
-        console.log("Was setCustomWallpaper called?");
     }
 
     saveSettings()

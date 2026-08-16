@@ -72,8 +72,6 @@ export class CountdownsMenuService
         }        
 
         this.closeMenu();
-
-        console.log(newCountdown);
     }
 
     addYearToYearCountdown()
@@ -106,8 +104,6 @@ export class CountdownsMenuService
         }        
 
         this.closeMenu();
-
-        console.log(newCountdown);
     }
 
     addEmptyCountdown()
@@ -139,8 +135,6 @@ export class CountdownsMenuService
         }        
 
         this.closeMenu();
-
-        console.log(newCountdown);
     }
 
     countdownCountWithinLimit = computed(() => {

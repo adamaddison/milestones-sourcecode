@@ -147,10 +147,25 @@
 {
     display: inline-block;
     vertical-align: top;
-    width: 32px;
-    height: 32px;
     margin-top: 0px;
-    box-shadow: 0px 0px 0px 0px black
+    box-shadow: 0px 0px 0px 0px black;
+    padding: 4px
+}
+@media only screen and (min-width: 1000px)
+{
+    #openCloseMilestonesInfoButton
+    {
+        height: 32px;
+        width: 32px;
+    }
+}
+@media only screen and (max-width: 999px)
+{
+    #openCloseMilestonesInfoButton
+    {
+        height: 36px;
+        width: 36px;
+    }
 }
 .openCloseMilestonesInfoButtonLight
 {
@@ -160,9 +175,22 @@
 {
     border: 1px solid #959595;
 }
-#openCloseMilestonesInfoImg
+
+@media only screen and (min-width: 1000px)
 {
-    width: 100%;
-    position: relative;
-    vertical-align: middle;
+    #openCloseMilestonesInfoImg
+    {
+        width: 100%;
+        position: relative;
+        top: 3px
+    }
+}
+@media only screen and (max-width: 999px)
+{
+    #openCloseMilestonesInfoImg
+    {
+        width: 100%;
+        position: relative;
+        top: 6px
+    }
 }
